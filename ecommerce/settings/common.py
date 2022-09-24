@@ -24,6 +24,7 @@ DEBUG = env("DEBUG")
 
 ALLOWED_HOSTS = env("ALLOWED_HOSTS").split(" ")
 
+AUTH_USER_MODEL = 'users.User'
 
 # Application definition
 

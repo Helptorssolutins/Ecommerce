@@ -1,1 +1,1 @@
-# Backed code for an Ecommerce API
+# Ecommerce API developed using Python (Django Rest)

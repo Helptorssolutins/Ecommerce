@@ -20,7 +20,7 @@ class DefaultUserManager(BaseUserManager):
             raise ValueError(_("Users must have a last name"))
         if email:
             email = self.normalize_email(email)
-            self.email_validator(email)
+            self.check_email(email)
         else:
             raise ValueError(_("An email address is required"))
 
@@ -49,7 +49,7 @@ class DefaultUserManager(BaseUserManager):
             raise ValueError(_("Superuser must have a password"))
         if email:
             email = self.normalize_email(email)
-            self.email_validator(email)
+            self.check_email(email)
         else:
             raise ValueError(_("An email address is required"))
         user = self.create_user(first_name, last_name, email, password, **extra_fields)
